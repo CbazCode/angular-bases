@@ -14,7 +14,7 @@ import { ListadoComponent } from "./listado/listado.component";
   ],
   //Solo van modules dentro
   imports: [
-    //
+    //Nos da funciones de directivas
     CommonModule,
   ]
 })
