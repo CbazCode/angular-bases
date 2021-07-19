@@ -24,22 +24,8 @@ export class MainPageComponent{
     poder: 0
   }
 
-  agregar(){
-    if( this.nuevo.nombre.trim().length === 0){
-      alert('Nombre vacio')
-      return;
-    }
-    if(this.nuevo.poder <= 0) {
-      alert('Poder invalido')
-      return
-    }
-    console.log(this.nuevo)
-    this.personajes.push(this.nuevo)
-    this.nuevo = {
-      nombre:'',
-      poder:0
-    }
-    alert('Personaje agregado con exito')
+  agregarNuevoPersonaje( personaje:Personaje ){
+    this.personajes.push(personaje)
   }
 
   // cambiarNombre(e:any){

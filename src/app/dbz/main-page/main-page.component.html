@@ -10,24 +10,9 @@
   </div>
 
   <div class="col">
-    <h3>Agregar</h3>
-    <hr>
-    <form action="
-    " (ngSubmit)= "agregar()">
-      <input
-        type="text"
-        placeholder="Nombre"
-        name="nombre"
-        [(ngModel)]="nuevo.nombre"
-        />
-        <!-- [value]="nuevo.nombre"
-        (input)="cambiarNombre($event)" -->
-        <input
-        type="number"
-        name="poder"
-        placeholder="Poder"
-        [(ngModel)]="nuevo.poder"/>
-      <button type="submit">Agregar</button>
-    </form>
+    <app-agregar
+      [nuevo]="nuevo"
+      (onNuevoPersonaje) = "agregarNuevoPersonaje( $event )"
+    ></app-agregar>
   </div>
 </div>
