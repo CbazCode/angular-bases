@@ -2,15 +2,13 @@
 <hr>
 
 <div class="row">
+
   <div class="col">
-    <h3>Personajes</h3>
-    <hr>
-    <ul >
-      <li *ngFor="let person of personajes; let i = index">
-        {{i + 1}}: {{person.nombre}} - {{person.poder | number}}
-      </li>
-    </ul>
+    <!-- [propiedad en hijo] = "nombre de propiedad que le pasa el padre" -->
+    <app-personajes [personajes]="personajes"></app-personajes>
+
   </div>
+
   <div class="col">
     <h3>Agregar</h3>
     <hr>
