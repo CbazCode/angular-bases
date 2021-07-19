@@ -5,20 +5,31 @@
   <div class="col">
     <h3>Personajes</h3>
     <hr>
-    <ul>
-      <li>Krilin - 700</li>
-      <li>Goku - 15000</li>
-      <li>Vegeta - 8500</li>
+    <ul >
+      <li *ngFor="let person of personajes; let i = index">
+        {{i + 1}}: {{person.nombre}} - {{person.poder | number}}
+      </li>
     </ul>
   </div>
   <div class="col">
     <h3>Agregar</h3>
     <hr>
     <form action="
-    ">
-      <input type="text" placeholder="Nombre"/>
-      <input type="number" placeholder="Poder"/>
-      <button>Agregar</button>
+    " (ngSubmit)= "agregar()">
+      <input
+        type="text"
+        placeholder="Nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre"
+        />
+        <!-- [value]="nuevo.nombre"
+        (input)="cambiarNombre($event)" -->
+        <input
+        type="number"
+        name="poder"
+        placeholder="Poder"
+        [(ngModel)]="nuevo.poder"/>
+      <button type="submit">Agregar</button>
     </form>
   </div>
 </div>
