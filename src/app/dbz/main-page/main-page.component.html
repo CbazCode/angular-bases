@@ -5,14 +5,13 @@
 
   <div class="col">
     <!-- [propiedad en hijo] = "nombre de propiedad que le pasa el padre" -->
-    <app-personajes [personajes]="personajes"></app-personajes>
+    <app-personajes></app-personajes>
 
   </div>
 
   <div class="col">
     <app-agregar
       [nuevo]="nuevo"
-      (onNuevoPersonaje) = "agregarNuevoPersonaje( $event )"
     ></app-agregar>
   </div>
 </div>
